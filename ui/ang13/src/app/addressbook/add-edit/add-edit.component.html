@@ -1,0 +1,53 @@
+<!-- <p>add-edit works!</p> -->
+
+
+<div class="form-froup row mt-2">
+<label class="col-sm-3 col-form-label">First Name</label>
+    <div class="col-sm-9">
+        <input type="text" id="fname" class="form-control" [(ngModel)]="FirstName" placeholder="Enter First Name" required>
+        <div class="invalid-feedback">
+            Please enter First Name.
+          </div>
+    </div>
+</div>
+
+<div class="form-froup row mt-2">
+    <label class="col-sm-3 col-form-label">Last Name</label>
+        <div class="col-sm-9">
+            <input type="text" id="lname" class="form-control" [(ngModel)]="LastName" placeholder="Enter Last Name" required>
+            <div class="invalid-feedback">
+                Please enter Last Name.
+              </div>
+        </div>
+    </div>
+
+    <div class="form-froup row mt-2">
+        <label class="col-sm-3 col-form-label">Address</label>
+            <div class="col-sm-9">
+                <input type="text" id="address" class="form-control" [(ngModel)]="Address" placeholder="Enter Address" required>
+                <div class="invalid-feedback">
+                    Please enter Address.
+                  </div>
+            </div>
+        </div>
+
+    <div class="form-froup row mt-2">
+        <label class="col-sm-3 col-form-label">Phone</label>
+            <div class="col-sm-9">
+                
+                <input type="text" id="phone" class="form-control" [(ngModel)]="Phone" placeholder="Enter Phone number" required>
+                <div class="invalid-feedback">
+                    Please enter a valid Phone number.
+                  </div>
+            </div>
+        </div>
+
+<button (click)="addItem()" *ngIf="book.Id==0" class="btn btn-primary">
+    Add
+</button>
+<button (click)="updateItem()" *ngIf="book.Id!==0" class="btn btn-primary">
+    Update
+</button>
+<!--<button (click)="findPhone()"  class="btn btn-primary">
+    Phone Controll
+</button> -->
